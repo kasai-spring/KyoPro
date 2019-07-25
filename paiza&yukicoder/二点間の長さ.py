@@ -1,0 +1,10 @@
+import math
+inputA = input().split()
+x1 = float(inputA[0])
+y1 = float(inputA[1])
+x2 = float(inputA[2])
+y2 = float(inputA[3])
+xdis = abs(x1-x2)
+ydis = abs(y1-y2)
+result = math.sqrt(xdis**2 + ydis**2)
+print(result)
