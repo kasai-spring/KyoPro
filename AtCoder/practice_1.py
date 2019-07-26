@@ -1,0 +1,5 @@
+a = int(input())
+b, c = (int(x) for x in input().split())
+s = str(input())
+print(a + b + c, s)
+# sys.stdin.readlineを使うとWAになる(改行コードが問題?)
