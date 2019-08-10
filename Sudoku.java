@@ -68,17 +68,12 @@ public class Sudoku {
 		for (int y = 0; y < 9; y++) {
 			for (int x = 0; x < 9; x++) {
 				if (puzzle[y][x] == 0) {
-					// System.out.println("x:"+x+"y:"+y);
 					HashSet<Integer> hashSet = new HashSet<Integer>();
 					ArrayList<Integer> canInput = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
 					checkX(y, hashSet);// x軸上で入力可能な値
-					// System.out.println("checkX:"+hashSet);
 					checkY(x, hashSet);// y軸上で入力可能な値
-					// System.out.println("checkY:"+hashSet);
-					checkB(x, y, hashSet);// 3ブロックについて
-					// System.out.println("checkB:"+hashSet);
+					checkB(x, y, hashSet);// ブロックについて
 					canInput.removeAll(hashSet);
-					// System.out.println("canInput"+canInput);
 					if (!(canInput.isEmpty())) {
 						for (int i = 0; i < canInput.size(); i++) {
 							puzzle[y][x] = canInput.get(i);
